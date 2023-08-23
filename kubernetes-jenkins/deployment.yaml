@@ -29,13 +29,13 @@ spec:
               cpu: "500m"
           ports:
             - name: httpport
-              containerPort: 8085
+              containerPort: 8090
             - name: jnlpport
               containerPort: 50000
           livenessProbe:
             httpGet:
               path: "/login"
-              port: 8085
+              port: 8090
             initialDelaySeconds: 90
             periodSeconds: 10
             timeoutSeconds: 5
@@ -43,7 +43,7 @@ spec:
           readinessProbe:
             httpGet:
               path: "/login"
-              port: 8085
+              port: 8090
             initialDelaySeconds: 60
             periodSeconds: 10
             timeoutSeconds: 5
