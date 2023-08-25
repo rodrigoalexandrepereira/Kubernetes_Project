@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: jenkins-service
+  name: jenkins-nodeport-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: jenkins
   ports:
